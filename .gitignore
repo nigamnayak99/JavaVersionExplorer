@@ -1,7 +1,7 @@
-# Compiled class file
+# Compiled class files
 *.class
 
-# Log file
+# Log files
 *.log
 
 # BlueJ files
@@ -10,10 +10,15 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Intellij Specific
+# IntelliJ Specific files
 .idea/
+# User-specific files for IntelliJ IDEA
+.idea/*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.nar
@@ -22,6 +27,23 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Virtual machine crash logs (Hotspot logs)
 hs_err_pid*
 replay_pid*
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Ignore any IDE-specific or build directories for other editors
+.vscode/
+node_modules/
+out/
+target/
