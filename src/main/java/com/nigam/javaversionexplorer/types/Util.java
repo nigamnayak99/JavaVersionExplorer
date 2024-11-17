@@ -1,4 +1,4 @@
-package com.nigam.javaversionexplorer.java8.lambdaexpressions.classes;
+package com.nigam.javaversionexplorer.types;
 
 import java.util.ArrayList;
 import java.util.List;

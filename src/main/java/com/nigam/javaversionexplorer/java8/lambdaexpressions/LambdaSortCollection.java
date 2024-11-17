@@ -1,7 +1,7 @@
 package com.nigam.javaversionexplorer.java8.lambdaexpressions;
 
-import com.nigam.javaversionexplorer.java8.lambdaexpressions.classes.Student;
-import com.nigam.javaversionexplorer.java8.lambdaexpressions.classes.Util;
+import com.nigam.javaversionexplorer.types.Student;
+import com.nigam.javaversionexplorer.types.Util;
 
 import java.util.Collections;
 import java.util.List;
