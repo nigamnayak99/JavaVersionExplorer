@@ -1,9 +1,15 @@
-package com.nigam.javaversionexplorer.types;
+package com.nigam.javaversionexplorer.utility;
+
+import com.nigam.javaversionexplorer.types.Student;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Util {
+
+    public static Predicate<Collection> isCollectionEmpty = collection -> collection.isEmpty();
 
     public static List<Student> getStudentList() {
         List<Student> students = new ArrayList<>();
