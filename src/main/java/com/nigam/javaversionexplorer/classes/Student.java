@@ -1,4 +1,4 @@
-package com.nigam.javaversionexplorer.types;
+package com.nigam.javaversionexplorer.classes;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.nigam.javaversionexplorer.types;
+package com.nigam.javaversionexplorer.classes;
 
 import com.nigam.javaversionexplorer.interfaces.Animal;
 import com.nigam.javaversionexplorer.interfaces.Bird;

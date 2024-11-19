@@ -1,6 +1,6 @@
 package com.nigam.javaversionexplorer.java8.functional_interface;
 
-import com.nigam.javaversionexplorer.types.Student;
+import com.nigam.javaversionexplorer.classes.Student;
 import com.nigam.javaversionexplorer.utility.Util;
 
 import java.util.function.Predicate;

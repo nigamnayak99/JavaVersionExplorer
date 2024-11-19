@@ -1,6 +1,6 @@
 package com.nigam.javaversionexplorer.utility;
 
-import com.nigam.javaversionexplorer.types.Student;
+import com.nigam.javaversionexplorer.classes.Student;
 
 import java.util.ArrayList;
 import java.util.Collection;

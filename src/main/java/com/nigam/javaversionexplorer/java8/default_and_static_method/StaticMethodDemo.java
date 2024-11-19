@@ -1,7 +1,7 @@
 package com.nigam.javaversionexplorer.java8.default_and_static_method;
 
 import com.nigam.javaversionexplorer.interfaces.Bird;
-import com.nigam.javaversionexplorer.types.Sparrow;
+import com.nigam.javaversionexplorer.classes.Sparrow;
 
 public class StaticMethodDemo {
 
