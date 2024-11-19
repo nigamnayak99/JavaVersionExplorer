@@ -1,4 +1,4 @@
-package com.nigam.javaversionexplorer.java8.lambdaexpressions;
+package com.nigam.javaversionexplorer.java8.lambda_expression;
 
 public class ThreadWithAnonymousInnerClass {
     public static void main(String[] args) {

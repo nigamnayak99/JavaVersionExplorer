@@ -1,4 +1,4 @@
-package com.nigam.javaversionexplorer.java8.lambdaexpressions;
+package com.nigam.javaversionexplorer.java8.lambda_expression;
 
 import com.nigam.javaversionexplorer.types.Student;
 import com.nigam.javaversionexplorer.types.Util;
