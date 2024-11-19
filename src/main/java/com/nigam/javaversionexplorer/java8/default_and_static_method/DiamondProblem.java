@@ -8,7 +8,7 @@ public class DiamondProblem {
 
     public static void main(String[] args) {
         Ostrich ostrich = new Ostrich();
-        ostrich.getSound();
+        ostrich.makeSound();
         System.out.println("Can Fly : " + Animal.canFly);
         System.out.println("Can RUn : " + Bird.canRun);
     }

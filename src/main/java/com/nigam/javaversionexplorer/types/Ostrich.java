@@ -5,9 +5,9 @@ import com.nigam.javaversionexplorer.interfaces.Bird;
 
 public class Ostrich implements Bird, Animal {
 
-
+    //Overriding default method for specific behaviour.
     @Override
-    public void getSound() {
-        Bird.super.getSound();     //Resolving Diamond Problem
+    public void makeSound() {
+        Bird.super.makeSound();
     }
 }
