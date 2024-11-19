@@ -5,11 +5,18 @@ import com.nigam.javaversionexplorer.types.Student;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Util {
 
     public static Predicate<Collection> isCollectionEmpty = collection -> collection.isEmpty();
+    public static Function<List<Student>, List<Student>> convertStudentNameToUpperCase =  studentList -> {
+        for(Student student: studentList) {
+            student.setName(student.getName().toUpperCase());
+        }
+        return studentList;
+    };
 
     public static List<Student> getStudentList() {
         List<Student> students = new ArrayList<>();
