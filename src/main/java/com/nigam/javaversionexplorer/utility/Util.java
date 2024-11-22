@@ -5,8 +5,10 @@ import com.nigam.javaversionexplorer.classes.Student;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class Util {
 
@@ -16,6 +18,30 @@ public class Util {
             student.setName(student.getName().toUpperCase());
         }
         return studentList;
+    };
+    public static Supplier<Student> defaultStudentSupplier = ()-> new Student("Default Student", 100, "Default Registration number");
+
+    public static Optional<Integer> extractMarkFromStudent(Student student) {
+        return Optional.of(student.getMarks());
+    }
+
+    /**
+     * A functional interface implementation that takes a student name as input and returns an Optional<Student>.
+     *
+     * Logic:
+     * - Loops through the list of students obtained from the `getStudentList()` method.
+     * - If a student with the matching name is found, it wraps the student object in an Optional and returns it.
+     * - If no matching student is found, it returns an empty Optional (using Optional.ofNullable(null)).
+     *
+     * Note:
+     * - Returning `Optional.ofNullable(null)` is redundant; you can use `Optional.empty()` instead for clarity.
+     * - This implementation assumes the existence of the `getStudentList()` method and `Student` class with a `getName()` method.
+     */
+    public static Function<String, Optional<Student>> getStudentByStudentName = studentName -> {
+        for(Student student: getStudentList()) {
+            if(student.getName().equals(studentName)) return Optional.of(student);
+        }
+        return Optional.ofNullable(null);
     };
 
     public static List<Student> getStudentList() {
