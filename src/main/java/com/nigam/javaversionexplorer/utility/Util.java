@@ -2,11 +2,9 @@ package com.nigam.javaversionexplorer.utility;
 
 import com.nigam.javaversionexplorer.classes.Student;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
+import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
@@ -24,6 +22,9 @@ public class Util {
     public static Optional<Integer> extractMarkFromStudent(Student student) {
         return Optional.of(student.getMarks());
     }
+    public static Predicate<Integer> integerPredicate = number -> number % 2 == 0;
+
+    public static IntPredicate longPredicate = number -> number % 2 == 0;
 
     /**
      * A functional interface implementation that takes a student name as input and returns an Optional<Student>.
@@ -43,6 +44,74 @@ public class Util {
         }
         return Optional.ofNullable(null);
     };
+
+    /**
+     * Generates an ArrayList of 10 random numbers between 1 and 100.
+     * @return List of random integers.
+     */
+    public static List<Integer> getRandomNumberList() {
+        List<Integer> randomNumbers = new ArrayList<>();
+        Random random = new Random();
+        // Generate 10 random numbers
+        for (int i = 0; i < 10; i++) {
+            randomNumbers.add(random.nextInt(100) + 1); // Random number between 1 and 100
+        }
+        return randomNumbers;
+    }
+
+    /**
+     * Generates an array of 10 random numbers between 1 and 100.
+     * @return Array of random integers.
+     */
+    public static int[] getRandomNumberArray() {
+        int[] randomNumbers = new int[10];  // Array of size 10
+        Random random = new Random();
+        // Generate 10 random numbers
+        for (int i = 0; i < randomNumbers.length; i++) {
+            randomNumbers[i] = random.nextInt(100) + 1;  // Random number between 1 and 100
+        }
+        return randomNumbers;
+    }
+
+    /**
+     * Generates a random sentence by selecting words from a list. The sentence can have repeated words.
+     * @return A random sentence.
+     */
+    public static String generateRandomSentence() {
+        // List of words to form the sentence
+        List<String> words = List.of(
+                "the", "quick", "brown", "fox", "jumps", "over", "lazy", "dog", "hello", "world",
+                "java", "streams", "code", "is", "fun", "have", "a", "great", "day", "my", "friend"
+        );
+
+        // Random object to generate random indices
+        Random random = new Random();
+
+        // Generate a random length for the sentence (between 5 to 15 words)
+        int sentenceLength = random.nextInt(11) + 5; // Between 5 and 15 words
+
+        StringBuilder sentence = new StringBuilder();
+
+        // Construct the sentence
+        for (int i = 0; i < sentenceLength; i++) {
+            // Randomly pick a word from the list
+            String randomWord = words.get(random.nextInt(words.size()));
+            // Add the word to the sentence
+            sentence.append(randomWord).append(" ");
+        }
+
+        // Remove the trailing space
+        sentence.setLength(sentence.length() - 1);
+
+        // Capitalize the first letter of the sentence
+        sentence.replace(0, 1, sentence.substring(0, 1).toUpperCase());
+
+        // Add a period at the end
+        sentence.append(".");
+
+        return sentence.toString();
+    }
+
 
     public static List<Student> getStudentList() {
         List<Student> students = new ArrayList<>();
