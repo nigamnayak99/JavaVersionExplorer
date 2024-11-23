@@ -2,6 +2,7 @@ package com.nigam.javaversionexplorer.utility;
 
 import com.nigam.javaversionexplorer.classes.Student;
 
+import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 import java.util.function.IntPredicate;
@@ -112,7 +113,12 @@ public class Util {
         return sentence.toString();
     }
 
-
+    public static Supplier<LocalDate> localDateSupplier = () -> LocalDate.now();
+    public static Supplier<LocalTime> localTimeSupplier = () -> LocalTime.now();
+    public static Supplier<LocalDateTime> localDateTimeSupplier = () -> LocalDateTime.now();
+    public static Supplier<ZonedDateTime> zonedDateTimeSupplier = () -> ZonedDateTime.now();
+    public static Supplier<OffsetDateTime> offsetDateTimeSupplier = () -> OffsetDateTime.now();
+    public static Supplier<Instant> currentInstantSupplier = () -> Instant.now();
     public static List<Student> getStudentList() {
         List<Student> students = new ArrayList<>();
         students.add(new Student("Mly", 85, "A123"));
