@@ -8,16 +8,17 @@ import lombok.Data;
 public class Student {
     String name;
     int marks;
+    int age;
     String registrationNumber;
 
 
     @Override
     public String toString() {
-        return "\nStudent{" +
-                "marks=" + marks +
-                ", name='" + name + '\'' +
-                ", registrationNumber='" + registrationNumber +
-                "}";
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", marks=" + marks +
+                ", age=" + age +
+                ", registrationNumber='" + registrationNumber + '\'' +
+                '}';
     }
-
 }
