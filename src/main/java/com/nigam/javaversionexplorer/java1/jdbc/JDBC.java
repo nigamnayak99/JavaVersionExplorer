@@ -1,6 +1,4 @@
-package com.nigam.javaversionexplorer.java1;
-
-import lombok.extern.slf4j.Slf4j;
+package com.nigam.javaversionexplorer.java1.jdbc;
 
 import java.sql.*;
 
